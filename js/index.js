@@ -40,3 +40,36 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// Code for MVP DOM 1
+
+const anchorTags = document.getElementsByTagName('a');
+// console.log(anchorTags);
+Array.from(anchorTags);
+// console.log(anchorTags);
+anchorTags[0].textContent = "Services";
+anchorTags[1].textContent = "Product";
+anchorTags[2].textContent = "Vision";
+anchorTags[3].textContent = "Feature";
+anchorTags[4].textContent = "About";
+anchorTags[5].textContent = "Contact";
+Array.from(anchorTags).forEach((element) => {
+  element.style.color = 'green';
+});
+
+const newHomeTag = document.querySelector('nav');
+const homeTag = document.createElement('a');
+homeTag.href = "#";
+homeTag.textContent = "Home";
+newHomeTag.prepend(homeTag);
+homeTag.style.color = 'green';
+const loginTag = document.createElement('a');
+loginTag.href = "#";
+loginTag.textContent = "Log In";
+newHomeTag.appendChild(loginTag);
+// newHomeTag.append(loginTag);
+loginTag.style.color = 'green';
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
