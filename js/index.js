@@ -45,15 +45,22 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // Code for MVP DOM 1
 
 const anchorTags = document.getElementsByTagName('a');
-// console.log(anchorTags);
 Array.from(anchorTags);
-// console.log(anchorTags);
-anchorTags[0].textContent = "Services";
-anchorTags[1].textContent = "Product";
-anchorTags[2].textContent = "Vision";
-anchorTags[3].textContent = "Feature";
-anchorTags[4].textContent = "About";
-anchorTags[5].textContent = "Contact";
+
+anchorTags[0].textContent = siteContent.nav["nav-item-1"];
+anchorTags[1].textContent = siteContent.nav["nav-item-2"];
+anchorTags[2].textContent = siteContent.nav["nav-item-3"];
+anchorTags[3].textContent = siteContent.nav["nav-item-4"];
+anchorTags[4].textContent = siteContent.nav["nav-item-5"];
+anchorTags[5].textContent = siteContent.nav["nav-item-5"];
+
+// anchorTags[0].textContent = "Services";
+// anchorTags[1].textContent = "Product";
+// anchorTags[2].textContent = "Vision";
+// anchorTags[3].textContent = "Feature";
+// anchorTags[4].textContent = "About";
+// anchorTags[5].textContent = "Contact";
+
 Array.from(anchorTags).forEach((element) => {
   element.style.color = 'green';
 });
@@ -68,8 +75,61 @@ const loginTag = document.createElement('a');
 loginTag.href = "#";
 loginTag.textContent = "Log In";
 newHomeTag.appendChild(loginTag);
-// newHomeTag.append(loginTag);
 loginTag.style.color = 'green';
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const ctaText = document.querySelector('.cta-text');
+
+const ctaTextH1 = document.querySelector('h1');
+ctaTextH1.textContent = siteContent.cta.h1;
+
+const ctaTextButton = document.querySelector('button');
+ctaTextButton.textContent = siteContent.cta.button;
+
+const ctaImg = document.querySelector('.cta img');
+ctaImg.src = siteContent.cta["img-src"];
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const middleImg = document.getElementById('middle-img');
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+const txtContentH4 = document.querySelectorAll('.text-content h4');
+
+txtContentH4[0].textContent = siteContent["main-content"]["features-h4"];
+txtContentH4[1].textContent = siteContent["main-content"]["about-h4"];
+txtContentH4[2].textContent = siteContent["main-content"]["services-h4"];
+txtContentH4[3].textContent = siteContent["main-content"]["product-h4"];
+txtContentH4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+const txtContentP = document.querySelectorAll('.text-content p');
+
+txtContentP[0].textContent = siteContent["main-content"]["features-content"];
+txtContentP[1].textContent = siteContent["main-content"]["about-content"];
+txtContentP[2].textContent = siteContent["main-content"]["services-content"];
+txtContentP[3].textContent = siteContent["main-content"]["product-content"];
+txtContentP[4].textContent = siteContent["main-content"]["vision-content"];
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent.contact["contact-h4"];
+
+
+const contactP = document.querySelectorAll('.contact p');
+contactP[0].textContent = siteContent.contact.address;
+contactP[1].textContent = siteContent.contact.phone;
+contactP[2].textContent = siteContent.contact.email;
+console.log(contactP);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const footerP = document.querySelector('footer p');
+footerP.textContent = siteContent.footer.copyright;
+console.log(footerP);
